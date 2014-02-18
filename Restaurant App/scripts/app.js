@@ -1,18 +1,14 @@
 (function() {
-    var el, app;
+    var el, survey;
 
     function setupEvents() {
-        $( "#rating" ).on( "change", function() {
-            $( "#rating-output" ).text( this.value );
-        }).trigger( "change" );
-        
-        $( "form" ).on( "submit", function( event ) {
+       $( ".submit" ).on( "click", function( event ) {
             event.preventDefault();
 
             var data = {
-                location: $( this.location ).val(),
-                appetizer: $(this.appetizer ).val() == "yes",
-                rating: $( this.rating ).val()
+                location: survey.location.toLowerCase(),
+                appetizer: survey.appetizer === true,
+                rating: survey.rating
             };
             Everlive.$.data( "Ratings" ).create( data,
                 function( data ){
@@ -26,14 +22,24 @@
         });
     };
     
+    survey = kendo.observable({
+        rating: 1,
+        location: "North",
+        locations: [ "North", "South", "East", "West" ],
+        appetizer: null
+    });
+	new kendo.mobile.Application( document.body, {
+        layout: "tabstrip-layout",
+        initial: "survey"
+    });
+    window.app = {};
+    window.app.models = {
+        survey: survey
+    };
+    el = new Everlive({ apiKey: "eVKxNui85A6TopjR" });
+    
     document.addEventListener( "deviceready", function () {
         navigator.splashscreen.hide();
-        new kendo.mobile.Application( document.body, {
-            layout: "tabstrip-layout",
-            skin: "flat",
-            initial: "tabstrip-survey"
-        });
-        el = new Everlive({ apiKey: "eVKxNui85A6TopjR" });
         setupEvents();
         analytics.Start();
     });

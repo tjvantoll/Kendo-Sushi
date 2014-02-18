@@ -3,7 +3,7 @@
 <head>
     <title>Restaurant</title>
     <meta charset="utf-8">
-    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
 
     <script src="cordova.js"></script>
@@ -14,58 +14,64 @@
     <script src="scripts/analytics.js"></script>
 </head>
 <body>
-    <div id="tabstrip-about"
+    <div id="about"
         data-role="view"
         data-title="About">
     </div>
 
-    <div id="tabstrip-location"
+    <div id="location"
         data-role="view"
         data-title="Locations">
     </div>
 
-    <div id="tabstrip-menu"
+    <div id="menu"
         data-role="view"
         data-title="Menu">
     </div>
     
-    <div id="tabstrip-survey"
-        data-role="view"
-        data-title="Survey">
-        <form>
-            <div>
-                <label for="location">
-                    Which location did you visit?
-                </label>
-                <select name="location" id="location">
-                    <option value="north">North</option>
-                    <option value="south">South</option>
-                    <option value="east">East</option>
-                    <option value="west">West</option>
-                </select>          
-            </div>
-			<div>
-                <label for="appetizer">
-                    Did you order an appetizer?
-                </label>
-                <select id="appetizer" name="appetizer">
-                    <option>No</option>
-                    <option>Yes</option>
-                </select>
-            </div>
-            <div>
-                <label for="rating">
-                    Please rate your overall experience.
-                </label>
-                <input type="range" min="1" max="5" value="3" id="rating" name="rating">
-                <output id="rating-output"></output>
-            </div>
-            <div>
-                <button data-role="button" data-rel="external">
-                    Submit
-                </button>
-            </div>
-        </form>
+	<div data-role="view" data-model="app.models.survey" data-title="Survey" data-stretch="true" id="survey">
+    	<form>
+			<ul data-role="listview" data-style="inset" data-type="group" data-stretch="true">
+				<li>
+					<ul>
+						<li>
+							<label>
+								Appetizer
+                				<input type="checkbox" data-bind="checked: appetizer">
+              				</label>
+            			</li>
+          			</ul>
+        		</li>
+ 		       <li class="detail-text">
+        		  Did you order an appetizer? Touch the row above to select it.
+			      <ul>
+           	      	  <li>
+			          	  <label>
+                              Location
+                              <select data-bind="source: locations, value: location"></select> 
+			              </label>
+			          </li>
+	              </ul>
+                </li>
+				<li class="detail-text">
+			        Which location did you visit?
+          			<ul>
+			            <li>
+            			    <input data-bind="value: rating" type="range" min="1" max="5" step="1">
+				            <span data-bind="html: rating"></span>
+			            </li>
+		            </ul>
+		        </li>
+				<li class="detail-text">
+			         Please rate your overall experience
+					<ul>
+			            <li>
+              				<a class="submit">Submit</a>
+			            </li>
+			        </ul>
+		        </li>
+            </ul>
+	    </form>
     </div>
 
     <div data-role="layout" data-id="tabstrip-layout">
@@ -76,10 +82,10 @@
         </div>
         <div data-role="footer">
             <div data-role="tabstrip">
-                <a href="#tabstrip-about" data-icon="info">About</a>
-                <a href="#tabstrip-location" data-icon="globe">Locations</a>
-                <a href="#tabstrip-menu" data-icon="bookmarks">Menu</a>
-                <a href="#tabstrip-survey" data-icon="compose">Survey</a>
+                <a href="#about" data-icon="info">About</a>
+                <a href="#location" data-icon="globe">Locations</a>
+                <a href="#menu" data-icon="bookmarks">Menu</a>
+                <a href="#survey" data-icon="compose">Survey</a>
             </div>
         </div>
     </div>
