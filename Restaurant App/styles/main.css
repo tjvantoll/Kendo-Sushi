@@ -3,8 +3,12 @@
 }
 
 .detail-text.km-group-container .km-group-title {
-  border-top: none;
-  padding-bottom: 20px;
+    border-top: none;
+    padding-bottom: 20px;
+    line-height: 1em;
+    text-indent: 0;
+    padding-left: 1em;
+    padding-top: 10px;
 }
 
 .km-ios7 form {
