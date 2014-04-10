@@ -2,7 +2,7 @@
 	var el, survey;
 
 	function setupEvents() {
-	   $( ".submit" ).on( "click", function( event ) {
+		$( ".submit" ).on( "click", function( event ) {
 			event.preventDefault();
 
 			var data = {
@@ -21,7 +21,7 @@
 			);
 		});
 	};
-	
+
 	survey = kendo.observable({
 		rating: 1,
 		location: "North",
@@ -44,4 +44,3 @@
 		analytics.Start();
 	});
 }());
-
