@@ -27,8 +27,9 @@
 		"org.apache.cordova.splashscreen",
 		"org.apache.cordova.statusbar",
 		"org.apache.cordova.vibration",
-		"com.telerik.plugin.eqatecanalytics",
-		"com.telerik.feedback"
+		"com.telerik.Cordova-MobileTestingExtension",
+		"com.telerik.feedback",
+		"com.telerik.plugin.eqatecanalytics"
 	],
 	"AndroidPermissions": [
 		"android.permission.CAMERA",
