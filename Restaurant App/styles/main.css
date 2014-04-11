@@ -1,52 +1,93 @@
 .detail-text .km-text {
-  text-transform: none;
+	text-transform: none;
 }
 
 .detail-text.km-group-container .km-group-title {
-    border-top: none;
-    padding-bottom: 20px;
-    line-height: 1em;
-    text-indent: 0;
-    padding-left: 1em;
-    padding-top: 10px;
+	border-top: none;
+	padding-bottom: 20px;
+	line-height: 1em;
+	text-indent: 0;
+	padding-left: 1em;
+	padding-top: 10px;
 }
 
 .km-ios7 form {
-  background-color: #EFEFF5;
+	background-color: #EFEFF5;
 }
 
 .km-ios7 .km-list {
-  background-color: white;
+	background-color: white;
 }
 
 .location {
-  position: absolute;
-  right: 30px;
-  color: #999EA9;
+	position: absolute;
+	right: 30px;
+	color: #999EA9;
 }
 
 .km-ios7 .k-slider {
-  position: relative;
-  width: 90%;
+	position: relative;
+	width: 90%;
 }
 
 input[type=range] {
-  width: 85%;
-  margin-right: 20px;
+	width: 85%;
+	margin-right: 20px;
 }
 
 .km-ios7 .km-list input[type=range] {
-  -webkit-appearance: slider-horizontal;
+	-webkit-appearance: slider-horizontal;
 }
 
 .km-ios7 .km-listview-link.submit {
-  color: #007AFF;
+	color: #007AFF;
 }
 
 .km-listview-link::after {
-    display: none;
+	display: none;
 }
 
 .km-android .km-list {
-  margin-bottom: -1em;
+	margin-bottom: -1em;
+}
+
+#feedback-modal ul {
+	width: 90%;
+	margin: 30px auto 20px;
+	padding: 0;
+	list-style-type: none;
+}
+#feedback-modal ul label {
+	display: block;
+	width: 50%px;
+	padding: 0 5px 0 0;
+}
+#feedback-modal ul input {
+	display: block;
+	width: 100%;
+	height: 36px;
+	line-height: 26px;
+	vertical-align: middle;
+	border: 1px solid #e7e7e7;
+	padding: 5px;
+	margin: 5px 0 10px;
+}
+#feedback-submit,
+#feedback-cancel {
+	display: block;
+	margin: 0 auto 20px;
+	text-align: center;
+	font-weight: bold;
+	width: 90%;
+	height: 36px;
+	line-height: 36px;
+	vertical-align: middle;
+	background-color: #015991;
+	color: #ffffff;
+	text-decoration: none;
+	cursor: pointer;
+}
+#feedback-cancel {
+	margin-bottom: 30px;
+	background-color: #929394;
 }

@@ -10,8 +10,9 @@
 	<script src="kendo/js/jquery.min.js"></script>
 	<script src="kendo/js/kendo.mobile.min.js"></script>
 	<script src="scripts/everlive.all.min.js"></script>
-	<script src="scripts/app.js"></script>
 	<script src="scripts/analytics.js"></script>
+	<script src="scripts/shake.js"></script>
+	<script src="scripts/app.js"></script>
 </head>
 <body>
 	<div id="about"
@@ -72,6 +73,22 @@
 				</li>
 			</ul>
 		</form>
+	</div>
+
+	<div data-role="modalview" id="feedback-modal">
+		<div data-role="header">
+			<div data-role="navbar">
+				<span>Feedback</span>
+			</div>
+		</div>
+		<ul>
+			<li>
+				<label for="feedback">Feedback:</label>
+				<input type="text" id="feedback">
+			</li>
+		</ul>
+		<a id="feedback-submit" type="button">Submit</a>
+		<a id="feedback-cancel" type="button">Cancel</a>
 	</div>
 
 	<div data-role="layout" data-id="tabstrip-layout">
