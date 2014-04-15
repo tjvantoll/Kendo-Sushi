@@ -4,6 +4,7 @@
 	function getStores( latitude, longitude ) {
 		var data = el.data( "Stores" ),
 			query = new Everlive.Query();
+
 		query.where().nearSphere( "Location",
 			new Everlive.GeoPoint( longitude, latitude ) );
 
@@ -26,7 +27,8 @@
 	function load() {
 		navigator.geolocation.getCurrentPosition(
 			function( position ) {
-				getStores( position.latitude, position.longitude );
+				getStores( position.coords.latitude,
+					position.coords.longitude );
 			},
 			function( error ) {
 				// Default to locations near Manhattan
