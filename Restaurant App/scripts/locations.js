@@ -1,5 +1,5 @@
 (function() {
-	var locations = [];
+	var list;
 
 	function getStores( latitude, longitude ) {
 		var data = el.data( "Stores" ),
@@ -12,16 +12,9 @@
 	};
 
 	function templateStores( data ) {
-		data.result.forEach(function( location ) {
-			locations.push( location );
-		});
-
-		$( "#location-list" ).kendoMobileListView({
-			dataSource: kendo.data.DataSource.create({
-				data: locations
-			}),
-			template: kendo.template( $( "#location-template" ).html() )
-		});
+		list.data( "kendoMobileListView" ).setDataSource(
+			new kendo.data.DataSource({ data: data.result })
+		);
 	};
 
 	function load() {
@@ -38,7 +31,14 @@
 		);
 	};
 
+	function init() {
+		list = $( "#location-list" ).kendoMobileListView({
+			template: kendo.template( $( "#location-template" ).html() )
+		});
+	};
+
 	app.locations = {
-		load: load
+		load: load,
+		init: init
 	};
 }());
