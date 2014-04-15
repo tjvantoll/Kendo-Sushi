@@ -1,9 +1,9 @@
 spec(function() {
 
-	var surveyCheck = [
+	var locationsCheck = [
 		web.executeScript(
 			"targetElement.classList.contains( 'km-view' )",
-			{ id: "survey" },
+			{ id: "locations" },
 			function( result ) {
 				assert( result ).equals( true );
 			}
@@ -21,16 +21,16 @@ spec(function() {
 				android.wait( 4000 )
 			]
 		},
-		"Then the survey view should display" : {
-			ios: surveyCheck,
-			android: surveyCheck
+		"Then the locations view should display" : {
+			ios: locationsCheck,
+			android: locationsCheck
 		}
 	};
 
 	describe( "Restaurant App", function() {
-		test( "Starting screen is survey", function() {
+		test( "Starting screen is locations", function() {
 			step( "Given the app is running" );
-			step( "Then the survey view should display" );
+			step( "Then the locations view should display" );
 		});
 	}, stepRepository );
 });
