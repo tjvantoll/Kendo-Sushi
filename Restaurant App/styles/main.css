@@ -3,6 +3,16 @@
 	float: left;
 	margin: 0.8em 0.5em 0.8em 0;
 }
+#location-list h3 {
+	margin-top: 0.8em;
+	margin-bottom: 0;
+}
+#location-list p {
+	margin: 0.2em 0;
+}
+#location-list i {
+	display: block;
+}
 
 
 /******* Survey **********/
