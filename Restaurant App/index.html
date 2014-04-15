@@ -19,104 +19,106 @@
 	<script src="scripts/locations.js"></script>
 </head>
 <body>
-	<div id="about"
-		data-role="view"
-		data-title="About">
-	</div>
 
-	<div id="locations"
-		data-role="view"
-		data-title="Locations"
-		data-after-show="app.locations.load"
-		data-init="app.locations.init">
-		<ul id="location-list"></ul>
-		<script type="text/x-kendo-template" id="location-template">
-			<img src="images/#= Image #">
-			<h3>#= City #</h3>
-			<p>#= Address #</p>
-		</script>
-	</div>
+<div id="about"
+	data-role="view"
+	data-title="About">
+</div>
 
-	<div id="menu"
-		data-role="view"
-		data-title="Menu">
-	</div>
-	
-	<div data-role="view" data-model="app.models.survey" data-title="Survey" id="survey">
-		<form>
-			<ul data-role="listview" data-style="inset" data-type="group" data-stretch="true">
-				<li>
-					<ul>
-						<li>
-							<label>
-								Appetizer
-								<input type="checkbox" data-bind="checked: appetizer">
-							</label>
-						</li>
-					</ul>
-				</li>
-			   <li class="detail-text">
-				  Did you order an appetizer? Touch the row above to select it.
-				  <ul>
-					  <li>
-						  <label>
-							  Location
-							  <select data-bind="source: locations, value: location"></select> 
-						  </label>
-					  </li>
-				  </ul>
-				</li>
-				<li class="detail-text">
-					Which location did you visit?
-					<ul>
-						<li>
-							<input data-bind="value: rating" type="range" min="1" max="5" step="1">
-							<span data-bind="html: rating"></span>
-						</li>
-					</ul>
-				</li>
-				<li class="detail-text">
-					 Please rate your overall experience
-					<ul>
-						<li>
-							<a class="submit">Submit</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</form>
-	</div>
+<div id="locations"
+	data-role="view"
+	data-title="Locations"
+	data-after-show="app.locations.load"
+	data-init="app.locations.init">
+	<ul id="location-list"></ul>
+	<script type="text/x-kendo-template" id="location-template">
+		<img src="images/#= Image #">
+		<h3>#= City #</h3>
+		<p>#= Address #</p>
+	</script>
+</div>
 
-	<div data-role="modalview" id="feedback-modal">
-		<div data-role="header">
-			<div data-role="navbar">
-				<span>Feedback</span>
-			</div>
-		</div>
-		<ul>
+<div id="menu"
+	data-role="view"
+	data-title="Menu">
+</div>
+
+<div data-role="view" data-model="app.models.survey" data-title="Survey" id="survey">
+	<form>
+		<ul data-role="listview" data-style="inset" data-type="group" data-stretch="true">
 			<li>
-				<label for="feedback">Feedback:</label>
-				<input type="text" id="feedback">
+				<ul>
+					<li>
+						<label>
+							Appetizer
+							<input type="checkbox" data-bind="checked: appetizer">
+						</label>
+					</li>
+				</ul>
+			</li>
+		   <li class="detail-text">
+			  Did you order an appetizer? Touch the row above to select it.
+			  <ul>
+				  <li>
+					  <label>
+						  Location
+						  <select data-bind="source: locations, value: location"></select> 
+					  </label>
+				  </li>
+			  </ul>
+			</li>
+			<li class="detail-text">
+				Which location did you visit?
+				<ul>
+					<li>
+						<input data-bind="value: rating" type="range" min="1" max="5" step="1">
+						<span data-bind="html: rating"></span>
+					</li>
+				</ul>
+			</li>
+			<li class="detail-text">
+				 Please rate your overall experience
+				<ul>
+					<li>
+						<a class="submit">Submit</a>
+					</li>
+				</ul>
 			</li>
 		</ul>
-		<a id="feedback-submit" type="button">Submit</a>
-		<a id="feedback-cancel" type="button">Cancel</a>
-	</div>
+	</form>
+</div>
 
-	<div data-role="layout" data-id="tabstrip-layout">
-		<div data-role="header">
-			<div data-role="navbar">
-				<span data-role="view-title"></span>
-			</div>
-		</div>
-		<div data-role="footer">
-			<div data-role="tabstrip">
-				<a href="#about" data-icon="info">About</a>
-				<a href="#locations" data-icon="globe">Locations</a>
-				<a href="#menu" data-icon="bookmarks">Menu</a>
-				<a href="#survey" data-icon="compose">Survey</a>
-			</div>
+<div data-role="modalview" id="feedback-modal">
+	<div data-role="header">
+		<div data-role="navbar">
+			<span>Feedback</span>
 		</div>
 	</div>
+	<ul>
+		<li>
+			<label for="feedback">Feedback:</label>
+			<input type="text" id="feedback">
+		</li>
+	</ul>
+	<a id="feedback-submit" type="button">Submit</a>
+	<a id="feedback-cancel" type="button">Cancel</a>
+</div>
+
+<div data-role="layout" data-id="tabstrip-layout">
+	<div data-role="header">
+		<div data-role="navbar">
+			<span data-role="view-title"></span>
+		</div>
+	</div>
+	<div data-role="footer">
+		<div data-role="tabstrip">
+			<a href="#about" data-icon="info">About</a>
+			<a href="#locations" data-icon="globe">Locations</a>
+			<a href="#menu" data-icon="bookmarks">Menu</a>
+			<a href="#survey" data-icon="compose">Survey</a>
+		</div>
+	</div>
+</div>
+
 </body>
 </html>
