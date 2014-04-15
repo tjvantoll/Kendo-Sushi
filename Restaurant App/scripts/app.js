@@ -15,13 +15,14 @@
 
 	window.app = {};
 	document.addEventListener( "deviceready", function () {
+		window.el = new Everlive({ apiKey: "eVKxNui85A6TopjR" });
 		new kendo.mobile.Application( document.body, {
 			layout: "tabstrip-layout",
-			initial: "survey"
+			initial: "locations",
+			skin: "flat"
 		});
 		feedback.initialize( "e8f59c50-c0de-11e3-a9b5-bbca8f4cc89b" );
 		navigator.splashscreen.hide();
 		analytics.Start();
-		window.el = new Everlive({ apiKey: "eVKxNui85A6TopjR" });
 	});
 }());

@@ -24,9 +24,14 @@
 		data-title="About">
 	</div>
 
-	<div id="location"
+	<div id="locations"
 		data-role="view"
-		data-title="Locations">
+		data-title="Locations"
+		data-after-show="app.locations.load">
+		<ul id="location-list"></ul>
+		<script type="text/x-kendo-template" id="location-template">
+			<h3>#= Address #</h3>
+		</script>
 	</div>
 
 	<div id="menu"
@@ -104,7 +109,7 @@
 		<div data-role="footer">
 			<div data-role="tabstrip">
 				<a href="#about" data-icon="info">About</a>
-				<a href="#location" data-icon="globe">Locations</a>
+				<a href="#locations" data-icon="globe">Locations</a>
 				<a href="#menu" data-icon="bookmarks">Menu</a>
 				<a href="#survey" data-icon="compose">Survey</a>
 			</div>
