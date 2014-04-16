@@ -19,7 +19,7 @@
 	};
 	function deg2rad(deg) {
 		return deg * (Math.PI/180)
-	}
+	};
 
 	function getStores( latitude, longitude ) {
 		var data = el.data( "Stores" ),
@@ -59,7 +59,7 @@
 				// Default to locations near Manhattan
 				getStores( 40.7, -73.9 );
 			},
-			{ timeout: 10000, maximumAge: 300000, enableHighAccuracy: true }
+			{ timeout: 2000, maximumAge: 300000 }
 		);
 	};
 
