@@ -13,11 +13,11 @@ spec(function() {
 	var stepRepository = {
 		"Given the app is running": {
 			ios: [
-				ios.launch( "restaurantapp://" ),
+				ios.launch( "kendosushi://" ),
 				ios.wait( 4000 )
 			],
 			android: [
-				android.launch( "com.telerik.RestaurantApp" ),
+				android.launch( "com.telerik.kendosushi" ),
 				android.wait( 4000 )
 			]
 		},

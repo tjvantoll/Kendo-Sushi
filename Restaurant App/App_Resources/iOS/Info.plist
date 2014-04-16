@@ -63,7 +63,7 @@
                 <string>com.telerik.automation</string>
                 <key>CFBundleURLSchemes</key>
                 <array>
-                    <string>restaurantapp</string>
+                    <string>kendosushi</string>
                 </array>
             </dict>
         </array>

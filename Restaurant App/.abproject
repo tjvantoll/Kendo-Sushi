@@ -1,8 +1,8 @@
 {
-	"name": "Restaurant App",
+	"name": "Kendo Sushi",
 	"projectVersion": 1,
-	"AppIdentifier": "com.telerik.RestaurantApp",
-	"DisplayName": "Restaurant App",
+	"AppIdentifier": "com.telerik.kendosushi",
+	"DisplayName": "Kendo Sushi",
 	"Author": "",
 	"Description": "",
 	"BundleVersion": "1.0",
