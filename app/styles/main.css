@@ -1,3 +1,20 @@
+/******* About *******/
+#about h1 {
+	font-size: 3em;
+	font-family: cursive;
+}
+#about img {
+	float: left;
+	margin: 3em 1em 1.5em 2em;
+	border-radius: 3px;
+	box-shadow: 2px 2px 9px 0 black;
+}
+#about p {
+	font-size: 1.3em;
+	margin: 1em;
+}
+
+
 /******* Locations *********/
 #location-list img {
 	float: left;
