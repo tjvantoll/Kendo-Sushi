@@ -39,7 +39,7 @@
 		<img src="images/#= Image #">
 		<h3>#= City #</h3>
 		<p>#= Address #</p>
-		# if ( Distance ) { #
+		# if ( typeof Distance !== "undefined" ) { #
 			<i>#= Distance.toFixed( 2 ) # miles away</i>
 		# } #
 	</script>
