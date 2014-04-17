@@ -1,6 +1,6 @@
 (function() {
 
-	function showAlert( message, title, callback ) {
+	/*function showAlert( message, title, callback ) {
 		window.alert( message, callback || function () {}, title, "OK" );
 	};
 	function showError( message ) {
@@ -11,7 +11,7 @@
 		var message = e.message + "' from " + e.filename + ":" + e.lineno;
 		showAlert( message, "Error occurred" );
 		return true;
-	});
+	});*/
 
 	window.app = {};
 	document.addEventListener( "deviceready", function () {
