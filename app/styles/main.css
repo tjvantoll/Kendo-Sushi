@@ -32,53 +32,7 @@
 }
 
 
-/******* Survey **********/
-.detail-text .km-text {
-	text-transform: none;
-}
-.detail-text.km-group-container .km-group-title {
-	border-top: none;
-	padding-bottom: 20px;
-	line-height: 1em;
-	text-indent: 0;
-	padding-left: 1em;
-	padding-top: 10px;
-}
-.km-ios7 form {
-	background-color: #EFEFF5;
-}
-.km-ios7 .km-list {
-	background-color: white;
-}
-.location {
-	position: absolute;
-	right: 30px;
-	color: #999EA9;
-}
-.km-ios7 .k-slider {
-	position: relative;
-	width: 90%;
-}
-input[type=range] {
-	width: 85%;
-	margin-right: 20px;
-}
-.km-ios7 .km-list input[type=range] {
-	-webkit-appearance: slider-horizontal;
-}
-.km-ios7 .km-listview-link.submit {
-	color: #007AFF;
-}
-.km-listview-link::after {
-	display: none;
-}
-.km-android .km-list {
-	margin-bottom: -1em;
-}
-
-
 /******* Feedback *************/
-
 #feedback-modal ul {
 	width: 90%;
 	margin: 30px auto 20px;

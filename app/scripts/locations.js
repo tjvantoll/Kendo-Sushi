@@ -59,7 +59,7 @@
 				// Default to locations near Manhattan
 				getStores( 40.7, -73.9 );
 			},
-			{ timeout: 2000, maximumAge: 300000 }
+			{ timeout: 5000, maximumAge: 300000 }
 		);
 	};
 
