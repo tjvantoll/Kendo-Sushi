@@ -13,19 +13,6 @@
 
 	<script src="scripts/app.js"></script>
 	<script src="scripts/locations.js"></script>
-
-	<!--
-	"com.telerik.Cordova-MobileTestingExtension"
-
-	<script src="scripts/shake.js"></script>
-	<script src="scripts/feedback.js"></script>
-	"com.telerik.feedback"
-	feedback.initialize( "e8f59c50-c0de-11e3-a9b5-bbca8f4cc89b" );
-
-	<script src="scripts/analytics.js"></script>
-	"com.telerik.plugin.eqatecanalytics"
-	analytics.Start();
-	-->
 </head>
 <body>
 
@@ -40,18 +27,7 @@
 
 <div id="locations"
 	data-role="view"
-	data-title="Locations"
-	data-after-show="app.locations.load"
-	data-init="app.locations.init">
-	<ul id="location-list"></ul>
-	<script type="text/x-kendo-template" id="location-template">
-		<img alt="" src="images/#= Image #">
-		<h3>#= City #</h3>
-		<p>#= Address #</p>
-		# if ( typeof Distance !== "undefined" ) { #
-			<i>#= Distance.toFixed( 2 ) # miles away</i>
-		# } #
-	</script>
+	data-title="Locations">
 </div>
 
 <div id="menu"
@@ -63,24 +39,6 @@
 	data-role="view"
 	data-title="Survey">
 </div>
-
-<!--
-<div data-role="modalview" id="feedback-modal">
-	<div data-role="header">
-		<div data-role="navbar">
-			<span>Feedback</span>
-		</div>
-	</div>
-	<ul>
-		<li>
-			<label for="feedback">Feedback:</label>
-			<input type="text" id="feedback">
-		</li>
-	</ul>
-	<a id="feedback-submit" type="button">Submit</a>
-	<a id="feedback-cancel" type="button">Cancel</a>
-</div>
--->
 
 <div data-role="layout" data-id="tabstrip-layout">
 	<div data-role="header">
