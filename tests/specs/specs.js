@@ -1,9 +1,9 @@
 spec(function() {
 
-	var locationsCheck = [
+	var aboutCheck = [
 		web.executeScript(
 			"targetElement.classList.contains( 'km-view' )",
-			{ id: "locations" },
+			{ id: "about" },
 			function( result ) {
 				assert( result ).equals( true );
 			}
@@ -21,16 +21,16 @@ spec(function() {
 				android.wait( 4000 )
 			]
 		},
-		"Then the locations view should display" : {
-			ios: locationsCheck,
-			android: locationsCheck
+		"Then the about view should display" : {
+			ios: aboutCheck,
+			android: aboutCheck
 		}
 	};
 
 	describe( "Restaurant App", function() {
-		test( "Starting screen is locations", function() {
+		test( "Starting screen is about", function() {
 			step( "Given the app is running" );
-			step( "Then the locations view should display" );
+			step( "Then the about view should display" );
 		});
 	}, stepRepository );
 });

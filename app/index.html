@@ -9,19 +9,18 @@
 	<script src="cordova.js"></script>
 	<script src="kendo/js/jquery.min.js"></script>
 	<script src="kendo/js/kendo.mobile.min.js"></script>
+	<script src="scripts/everlive.all.min.js"></script>
 
 	<script src="scripts/app.js"></script>
 	<script src="scripts/locations.js"></script>
 
 	<!--
-	<script src="scripts/everlive.all.min.js"></script>
+	"com.telerik.Cordova-MobileTestingExtension"
 
 	<script src="scripts/shake.js"></script>
 	<script src="scripts/feedback.js"></script>
 	"com.telerik.feedback"
 	feedback.initialize( "e8f59c50-c0de-11e3-a9b5-bbca8f4cc89b" );
-
-	"com.telerik.Cordova-MobileTestingExtension"
 
 	<script src="scripts/analytics.js"></script>
 	"com.telerik.plugin.eqatecanalytics"
@@ -46,7 +45,7 @@
 	data-init="app.locations.init">
 	<ul id="location-list"></ul>
 	<script type="text/x-kendo-template" id="location-template">
-		<img src="images/#= Image #">
+		<img alt="" src="images/#= Image #">
 		<h3>#= City #</h3>
 		<p>#= Address #</p>
 		# if ( typeof Distance !== "undefined" ) { #
