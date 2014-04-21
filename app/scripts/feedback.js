@@ -19,6 +19,7 @@
 	};
 
 	function setupEvents() {
+		feedback.initialize( "e8f59c50-c0de-11e3-a9b5-bbca8f4cc89b" );
 		modal = $( "#feedback-modal" ).kendoMobileModalView({ width: 320 });
 		$( "#feedback-cancel" ).on( "click", function() {
 			modal.kendoMobileModalView( "close" );
