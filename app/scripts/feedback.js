@@ -20,10 +20,12 @@
 
 	function setupEvents() {
 		modal = $( "#feedback-modal" ).kendoMobileModalView({ width: 320 });
-		$( "#feedback-cancel" ).on( "click", function() {
+		$( "#feedback-cancel" ).on( "click", function( event ) {
+			event.preventDefault();
 			modal.kendoMobileModalView( "close" );
 		});
-		$( "#feedback-submit" ).on( "click", function() {
+		$( "#feedback-submit" ).on( "click", function( event ) {
+			event.preventDefault();
 			sendFeedback();
 		});
 		$( window ).on( "shake", function() {
